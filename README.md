@@ -1,6 +1,8 @@
 
 tested on python version 3.9.4
 
+## Installation
+```bash
 docker build --tag apertium .
 
 docker run --interactive --tty \
@@ -9,6 +11,7 @@ docker run --interactive --tty \
 apertium
 
 docker exec -it apertium-visualizer bash
+```
 
 ```bash
 $ # filter languages for drawing directed graphs
@@ -23,7 +26,7 @@ $ echo 'seluk:seluk<adj>' | apertium-visualizer FILENAME.dix
 $ dot -Tpng FILENAME.gv -o FILENAME.png
 ```
 
-`apertium-visualizer` will create a `apertium.en.en.gv` graphviz file
+`apertium-visualizer` will create a `FILENAME.gv` graphviz file
 
 using dot you can choose between different format like png, svg, pdf
 
