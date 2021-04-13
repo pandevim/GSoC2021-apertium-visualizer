@@ -1,6 +1,12 @@
 
 tested on python version 3.9.4
 
+`apertium-visualizer` will create a `FILENAME.gv` graphviz file
+
+using dot you can choose between different format like png, svg, pdf
+
+using this approach we can use the `gv` file to work with web visualizations
+
 ## Installation
 ```bash
 docker build --tag apertium .
@@ -13,6 +19,7 @@ apertium
 docker exec -it apertium-visualizer bash
 ```
 
+## Usage
 ```bash
 $ # filter languages for drawing directed graphs
 $ # dot - filter for drawing directed graphs
@@ -25,10 +32,3 @@ $ FILENAME=apertium-tet.tet
 $ echo 'seluk:seluk<adj>' | apertium-visualizer FILENAME.dix
 $ dot -Tpng FILENAME.gv -o FILENAME.png
 ```
-
-`apertium-visualizer` will create a `FILENAME.gv` graphviz file
-
-using dot you can choose between different format like png, svg, pdf
-
-using this approach we can use the `gv` file to work with web visualizations
-
